@@ -1,0 +1,139 @@
+{
+  "personalInformation": [
+    {
+      "name": "relationWithFirstLifeAssured",
+      "type": "single-select",
+      "value": [
+        { "Text": "Parent", "Value": "parent" },
+        { "Text": "Self", "Value": "Self" },
+        { "Text": "Spouse", "Value": "Spouse" }
+      ],
+      "input": "Self"
+    },
+    { "name": "firstName", "type": "text", "value": null, "input": "Test" },
+    { "name": "middleName", "type": "text", "value": null, "input": "" },
+    { "name": "lastName", "type": "text", "value": null, "input": "Data" },
+    {
+      "name": "gender",
+      "type": "single-select",
+      "value": [
+        { "Text": "Male", "Value": "Male" },
+        { "Text": "Female", "Value": "Female" }
+      ],
+      "input": "Male"
+    },
+    {
+      "name": "education",
+      "type": "single-select",
+      "value": [
+        { "Text": "SSC", "Value": "10Th" },
+        { "Text": "HSC", "Value": "12Th" },
+        { "Text": "Graduate and above", "Value": "graduate" },
+        { "Text": "Post Graduate", "Value": "postGraduate" }
+      ],
+      "input": "graduate"
+    },
+    {
+      "name": "occupation",
+      "type": "single-select",
+      "value": [
+        { "Text": "Salaried", "Value": "salaried" },
+        { "Text": "Self Employed", "Value": "selfEmployed" }
+      ],
+      "input": "salaried"
+    },
+    {
+      "name": "dateOfBirth",
+      "type": "date",
+      "value": null,
+      "input": "11-11-1999"
+    },
+    {
+      "name": "doYouConsumeTobacco",
+      "type": "single-select",
+      "value": [
+        { "Text": "No", "Value": "No" },
+        { "Text": "Yes", "Value": "Yes" }
+      ],
+      "input": "No"
+    },
+    {
+      "name": "annualIncome",
+      "type": "currency",
+      "value": null,
+      "input": "10,00,000"
+    },
+    { "name": "zipCode", "type": "text", "value": null, "input": "400101" },
+    {
+      "name": "emailId",
+      "type": "text",
+      "value": null,
+      "input": "test@test.com"
+    }
+  ],
+  "suitabilityDetail": [
+    {
+      "name": "isSuitabilityDone",
+      "type": "boolean",
+      "value": null,
+      "input": "0"
+    },
+    {
+      "name": "lifeStage",
+      "type": "single-select",
+      "value": [
+        { "Text": "Married", "Value": "Married" },
+        { "Text": "Married with childern", "Value": "Married with childern" },
+        {
+          "Text": "Married with older childern",
+          "Value": "Married with older childern"
+        },
+        { "Text": "Nearing retirement", "Value": "Nearing retirement" },
+        { "Text": "Retired", "Value": "Retired" },
+        { "Text": "Single", "Value": "Single" }
+      ],
+      "input": "Single"
+    },
+    {
+      "name": "financialAndFamilyGoals",
+      "type": "single-select",
+      "value": [
+        { "Text": "Child Future", "Value": "Child Future" },
+        { "Text": "Life Protection", "Value": "Life Protection" },
+        { "Text": "Regular Income", "Value": "Regular Income" },
+        { "Text": "Retirement Planning", "Value": "Retirement Planning" },
+        { "Text": "Wealth Creation", "Value": "Wealth Creation" }
+      ],
+      "input": "Wealth Creation"
+    },
+    {
+      "name": "riskProfile",
+      "type": "single-select",
+      "value": [
+        { "Text": "High", "Value": "High" },
+        { "Text": "Low", "Value": "Low" },
+        { "Text": "Medium", "Value": "Medium" }
+      ],
+      "input": "Low"
+    },
+    { "name": "goalHorizon", "type": "text", "value": null, "input": "test" },
+    {
+      "name": "insurancePortfolio",
+      "type": "boolean",
+      "value": null,
+      "input": "0"
+    },
+    {
+      "name": "sltIns",
+      "type": "single-select",
+      "value": [
+        { "Text": "1", "Value": "1" },
+        { "Text": "2", "Value": "2" },
+        { "Text": "3", "Value": "3" },
+        { "Text": "4", "Value": "4" },
+        { "Text": "5", "Value": "5" }
+      ],
+      "input": "1"
+    }
+  ]
+}
