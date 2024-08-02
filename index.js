@@ -51,7 +51,6 @@ const scarpping = async () => {
         visible: true,
     });
     await fillFormFields(page, savingsGateCriteria);
-
     await page.click('#submit-form');
 
     try {
@@ -84,9 +83,9 @@ const scarpping = async () => {
 
 scarpping();
 
-const fillFormFields = async (page, savingsGateCriteria) => {
-    for (const key of Object.keys(savingsGateCriteria)) {
-        const fields = savingsGateCriteria[key];
+const fillFormFields = async (page, formData) => {
+    for (const key of Object.keys(formData)) {
+        const fields = formData[key];
         for (const field of fields) {
             try {
                 if (field.type === "text" || field.type === "currency") {
@@ -201,13 +200,3 @@ const fillFormFields = async (page, savingsGateCriteria) => {
     }, 10000); // Adjust the timeout as needed
   });
 }; */
-
-/* else if (field.type === "boolean") {
-        await page.waitForSelector(
-          `input[name="${field.name}"][value="${field.input}"]`,
-          {
-            visible: true,
-          }
-        );
-        await page.click(`input[name="${field.name}"][value="${field.input}"]`);
-      } */
