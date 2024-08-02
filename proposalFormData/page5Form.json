@@ -1,0 +1,78 @@
+{
+    "payoutDetails": [
+        {
+            "name": "accountHolderName",
+            "input": "test",
+            "type": "text",
+            "value": null
+        },
+        {
+            "name": "ifscCode",
+            "input": "test",
+            "type": "text",
+            "value": null
+        },
+        {
+            "name": "bankName",
+            "input": "test",
+            "type": "text",
+            "value": null
+        },
+        {
+            "name": "branchName",
+            "input": "test",
+            "type": "text",
+            "value": null
+        },
+        {
+            "name": "accountNumber",
+            "input": "test",
+            "type": "number",
+            "value": []
+        },
+        {
+            "name": "re-EnterAccountNumber",
+            "input": "test",
+            "type": "number",
+            "value": []
+        },
+        {
+            "name": "accountType",
+            "input": "current",
+            "type": "single-select",
+            "value": [
+                {
+                    "Text": "Current",
+                    "Value": "current"
+                },
+                {
+                    "Text": "Non-Resident External",
+                    "Value": "nre"
+                },
+                {
+                    "Text": "Non Resident Ordinary Account",
+                    "Value": "nro"
+                },
+                {
+                    "Text": "Saving",
+                    "Value": "saving"
+                }
+            ]
+        },
+        {
+            "name": "neftProof",
+            "input": "NEFT bank Statement",
+            "type": "single-select",
+            "value": [
+                {
+                    "Text": "NEFT bank Statement",
+                    "Value": "NEFT bank Statement"
+                },
+                {
+                    "Text": "NEFT cheque copy",
+                    "Value": "NEFT cheque copy"
+                }
+            ]
+        }
+    ]
+}

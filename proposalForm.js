@@ -10,7 +10,7 @@ async function fetchData() {
             url: "https://dev.insurance.api.1silverbullet.tech/v2/lifesave/proposal?product_id=FGPlus&manufacturer_id=TATA&version=1",
             headers: {
                 Authorization:
-                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQQVlMT0FEIjp7ImV4dGVybmFsUmVmZXJlbmNlSWQiOiIiLCJyZWdpb25JZCI6IiIsInJvbGVJZCI6IjIiLCJ1c2VyaWQiOiI4OTI1IiwidXNlclR5cGUiOiJBQyIsImJyYW5jaElkIjoiIiwiY2hhbm5lbFR5cGUiOiIiLCJjdXN0b21lclR5cGUiOiIiLCJlbWFpbElkIjoiIiwidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsImpvdXJuZXlfaWQiOiIiLCJybUNvZGUiOiIiLCJ2YXJGaWVsZHMiOltdfSwiZXhwaXJlcyI6MTcyMjU4NDc5OC4yNDY3NDV9.WhwhVSSI1hJ2iMx7AE00yWA-KYHE0cVeHonNQnwbhAI",
+                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQQVlMT0FEIjp7ImV4dGVybmFsUmVmZXJlbmNlSWQiOiIiLCJyZWdpb25JZCI6IiIsInJvbGVJZCI6IjIiLCJ1c2VyaWQiOiI4OTI1IiwidXNlclR5cGUiOiJBQyIsImJyYW5jaElkIjoiIiwiY2hhbm5lbFR5cGUiOiIiLCJjdXN0b21lclR5cGUiOiIiLCJlbWFpbElkIjoiIiwidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsImpvdXJuZXlfaWQiOiIiLCJybUNvZGUiOiIiLCJ2YXJGaWVsZHMiOltdfSwiZXhwaXJlcyI6MTcyMjU5OTE0My43MTAwMjV9.9ywisZ3_RrpEWB1LU63iD6gZ6MPN-jw3qR8vsWeGf9c",
             },
         };
 
@@ -19,16 +19,20 @@ async function fetchData() {
         const excludeNames = ["traceInfo", "distributor"];
         const formData = {};
 
-        // Function to process fields and field groups
         const processFields = (fields, parentName) => {
             if (!formData[parentName]) {
                 formData[parentName] = [];
             }
             Object.keys(fields).forEach((field) => {
                 const fieldData = fields[field];
+                // Ensure that fieldData.value is an array and handle it properly
+                const inputValue = fieldData.value && Array.isArray(fieldData.value) && fieldData.value.length > 0
+                    ? fieldData.value[0].Value // Adjust this based on your actual data structure
+                    : "test";
+
                 const newData = {
                     name: fieldData.name,
-                    input: fieldData.value && fieldData.value.length > 0 ? fieldData.value[0].Value : "test",
+                    input: inputValue,
                     type: fieldData.type,
                     value: fieldData.value
                 };
@@ -36,22 +40,32 @@ async function fetchData() {
             });
         };
 
+        const processNestedGroups = (nestedGroups, parentName) => {
+            Object.keys(nestedGroups).forEach((nestedKey) => {
+                const nestedGroup = nestedGroups[nestedKey];
+                if (nestedGroup.fields) {
+                    processFields(nestedGroup.fields, parentName);
+                } else if (nestedGroup.fieldGroups) {
+                    // Process further nested field groups
+                    processNestedGroups(nestedGroup.fieldGroups, parentName);
+                }
+            });
+        };
+
         Object.keys(extractedValue).forEach((key) => {
             const group = extractedValue[key];
             if (!excludeNames.includes(group.name)) {
                 if (group.fieldGroups) {
-                    const nestedFieldGroups = group.fieldGroups;
-                    Object.keys(nestedFieldGroups).forEach((nestedKey) => {
-                        const nestedGroup = nestedFieldGroups[nestedKey];
-                        if (nestedGroup.fields) {
-                            processFields(nestedGroup.fields, group.name);
-                        }
-                    });
-                } else if (group.fields) {
+                    // Process nested field groups
+                    processNestedGroups(group.fieldGroups, group.name);
+                }
+                if (group.fields) {
                     processFields(group.fields, group.name);
                 }
             }
         });
+
+
         // Write the formData to the JSON file
         fs.writeFile(path, JSON.stringify(formData, null, 2), 'utf8', (err) => {
             if (err) {

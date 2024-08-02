@@ -1,12 +1,6 @@
 import puppeteer from "puppeteer";
 import fs from "fs";
 
-// Read and parse the JSON file
-const savingsGateCriteriaRawData = fs.readFileSync("./savingsGateCriteria.json");
-const proposalFormRawData = fs.readFileSync("./proposalForm.json");
-const savingsGateCriteria = JSON.parse(savingsGateCriteriaRawData);
-const proposalForm = JSON.parse(proposalFormRawData);
-
 const scarpping = async () => {
     const browser = await puppeteer.launch({
         headless: false,
@@ -47,6 +41,8 @@ const scarpping = async () => {
     await page.click("#FGPlus-129");
 
     // Forth Page (Gate Criteria)
+    const savingsGateCriteriaRawData = fs.readFileSync("./savingsGateCriteria.json");
+    const savingsGateCriteria = JSON.parse(savingsGateCriteriaRawData);
     await page.waitForSelector("#relationWithFirstLifeAssured", {
         visible: true,
     });
@@ -73,12 +69,23 @@ const scarpping = async () => {
     await page.click("#checked-out");
 
     // Proposal Form
+    const proposalForm1RawData = fs.readFileSync("./proposalFormData/page1Form.json");
+    const proposalFormPage1 = JSON.parse(proposalForm1RawData);
     await page.waitForSelector("#relationWithLA", {
         visible: true,
     });
-    await fillFormFields(page, proposalForm);
-    console.log('done form page')
+    console.log('Start page 1')
+    await fillFormFields(page, proposalFormPage1);
+    console.log('done form page 1')
     await page.click("#submit-proposal-form");
+
+    const proposalForm2RawData = fs.readFileSync("./proposalFormData/page2Form.json");
+    const proposalFormPage2 = JSON.parse(proposalForm2RawData);
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    console.log('Start page 2')
+    await fillFormFields(page, proposalFormPage2);
+    console.log('done form page2')
+    // await page.click("#submit-proposal-form");
 };
 
 scarpping();
