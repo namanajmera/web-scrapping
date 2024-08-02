@@ -1,4 +1,6 @@
 import axios from "axios";
+import fs from "fs";
+const path = './proposalForm.json';
 
 async function fetchData() {
     try {
@@ -14,23 +16,23 @@ async function fetchData() {
 
         const response = await axios.request(config);
         const extractedValue = response.data.data.fieldGroups;
-        // console.log("extractedValue", extractedValue.data.fieldGroups);
         const excludeNames = ["traceInfo", "distributor"];
-        const data = {};
+        const formData = {};
 
         // Function to process fields and field groups
         const processFields = (fields, parentName) => {
-            if (!data[parentName]) {
-                data[parentName] = [];
+            if (!formData[parentName]) {
+                formData[parentName] = [];
             }
             Object.keys(fields).forEach((field) => {
                 const fieldData = fields[field];
                 const newData = {
                     name: fieldData.name,
-                    input: "",
+                    input: fieldData.value && fieldData.value.length > 0 ? fieldData.value[0].Value : "test",
                     type: fieldData.type,
+                    value: fieldData.value
                 };
-                data[parentName].push(newData);
+                formData[parentName].push(newData);
             });
         };
 
@@ -50,8 +52,14 @@ async function fetchData() {
                 }
             }
         });
-
-        console.log(JSON.stringify(data));
+        // Write the formData to the JSON file
+        fs.writeFile(path, JSON.stringify(formData, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error("Error writing to file:", err);
+            } else {
+                console.log("formData successfully written to proposalForm.json");
+            }
+        });
     } catch (error) {
         console.error("There was an error with the fetch operation:", error);
     }
