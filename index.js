@@ -2,8 +2,10 @@ import puppeteer from "puppeteer";
 import fs from "fs";
 
 // Read and parse the JSON file
-const rawData = fs.readFileSync("./savingsGateCriteria.json");
-const savingsGateCriteria = JSON.parse(rawData);
+const savingsGateCriteriaRawData = fs.readFileSync("./savingsGateCriteria.json");
+const proposalFormRawData = fs.readFileSync("./proposalForm.json");
+const savingsGateCriteria = JSON.parse(savingsGateCriteriaRawData);
+const proposalForm = JSON.parse(proposalFormRawData);
 
 const scarpping = async () => {
     const browser = await puppeteer.launch({
@@ -60,20 +62,6 @@ const scarpping = async () => {
     } catch (error) {
         console.log('Button Not clicked successfully');
     }
-    console.log('successfully');
-    /*  try {
-         await page.evaluate(() => {
-             console.log(' successfully111');
-             const button = document.querySelector('#submit-sq');
-             console.log('button', button)
-             if (button) { 
-                 console.log('Button clicked successfully');
-                 button.click(); 
-             }
-         });
-     } catch (error) {
-         console.log('Button Not clicked successfully');
-     } */
     // Single Quote
     await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 50000)));
     await page.waitForSelector('#submit-sq', { visible: true, timeout: 50000 });
@@ -86,7 +74,12 @@ const scarpping = async () => {
     await page.click("#checked-out");
 
     // Proposal Form
-
+    await page.waitForSelector("#relationWithLA", {
+        visible: true,
+    });
+    await fillFormFields(page, proposalForm);
+    console.log('done form page')
+    await page.click("#submit-proposal-form");
 };
 
 scarpping();
@@ -97,36 +90,94 @@ const fillFormFields = async (page, savingsGateCriteria) => {
         for (const field of fields) {
             try {
                 if (field.type === "text" || field.type === "currency") {
-                    await page.waitForSelector(`input[name="${field.name}"]`, {
-                        visible: true,
-                        timeout: 1000,
-                    });
+                    await page.waitForSelector(`input[name="${field.name}"]`, { visible: true, timeout: 500 });
+
+                    const isDisabled = await page.evaluate((name) => {
+                        const input = document.querySelector(`input[name="${name}"]`);
+                        return input ? input.disabled : false;
+                    }, field.name);
+
+                    if (isDisabled) {
+                        console.log(`Field "${field.name}" is disabled, skipping...`);
+                        continue;
+                    }
+
                     await page.evaluate((name) => {
                         document.querySelector(`input[name="${name}"]`).value = "";
                     }, field.name);
                     await page.type(`input[name="${field.name}"]`, field.input);
+
                 } else if (field.type === "single-select") {
-                    await page.waitForSelector(`select[name="${field.name}"]`, {
-                        visible: true,
-                        timeout: 1000,
-                    });
-                    await page.evaluate((name) => {
-                        document.querySelector(`select[name="${name}"]`).value = "";
+                    await page.waitForSelector(`select[name="${field.name}"]`, { visible: true, timeout: 500 });
+
+                    const isDisabled = await page.evaluate((name) => {
+                        const select = document.querySelector(`select[name="${name}"]`);
+                        return select ? select.disabled : false;
                     }, field.name);
-                    await page.select(`select[name="${field.name}"]`, field.input);
-                } else if (field.type === "boolean") {
-                    await page.waitForSelector(`label[name="${field.name}"]`, { visible: true, timeout: 1000 });
-                    const radioButton = await page.$$(`label[name="${field.name}"]`);
-                    if (radioButton) {
-                        field.input === "0" ? await radioButton[1].click() : await radioButton[0].click();
+
+                    if (isDisabled) {
+                        console.log(`Field "${field.name}" is disabled, skipping...`);
+                        continue;
                     }
+
+                    await page.select(`select[name="${field.name}"]`, field.input);
+
+                } else if (field.type === "boolean") {
+                    await page.waitForSelector(`label[name="${field.name}"]`, { visible: true, timeout: 500 });
+
+                    const isDisabled = await page.evaluate((name) => {
+                        const labels = document.querySelectorAll(`label[name="${name}"]`);
+                        return Array.from(labels).some(label => label.disabled);
+                    }, field.name);
+
+                    if (isDisabled) {
+                        console.log(`Field "${field.name}" is disabled, skipping...`);
+                        continue;
+                    }
+
+                    const radioButtons = await page.$$(`label[name="${field.name}"]`);
+                    if (radioButtons.length > 0) {
+                        field.input === "0" ? await radioButtons[1].click() : await radioButtons[0].click();
+                    }
+
+                } else if (field.type === "checkbox") {
+                    await page.waitForSelector(`input[type="checkbox"][name="${field.name}"]`, { visible: true, timeout: 500 });
+
+                    const isDisabled = await page.evaluate((name) => {
+                        const checkbox = document.querySelector(`input[type="checkbox"][name="${name}"]`);
+                        return checkbox ? checkbox.disabled : false;
+                    }, field.name);
+
+                    if (isDisabled) {
+                        console.log(`Field "${field.name}" is disabled, skipping...`);
+                        continue;
+                    }
+
+                    const checkbox = await page.$(`input[type="checkbox"][name="${field.name}"]`);
+                    if (checkbox) {
+                        const isChecked = await page.evaluate(checkbox => checkbox.checked, checkbox);
+                        if (isChecked !== field.input) {
+                            await checkbox.click(); 
+                        }
+                    }
+
+                } else if (field.type === "file") {
+                    await page.waitForSelector(`input[type="file"][name="${field.name}"]`, { visible: true });
+
+                    const filePath = './20190.jpg'; 
+                    const inputHandle = await page.$(`input[type="file"][name="${field.name}"]`);
+
+                    await inputHandle.uploadFile(filePath);
+
                 }
             } catch (error) {
-                console.log(`Skipping field : ${field.name}, Error: ${error.message}`);
+                console.log(`Skipping field "${field.name}", Error: ${error.message}`);
             }
         }
     }
 };
+
+
 /* const getResponseData = async (page, endPoint) => {
   return new Promise((resolve, reject) => {
     page.on("response", async (response) => {
