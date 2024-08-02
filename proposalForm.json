@@ -1,0 +1,2195 @@
+{
+    "proposerDetails": [
+        {
+            "name": "relationWithLA",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "title",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "maritalStatus",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "maidenName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mobileNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "email",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "husbandOrFathersFirstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "husbandOrFatherLastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mothersFirstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mothersLastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "residentStatus",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "nationality",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "politicallyExposedPerson",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "policticalDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mwpa",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "qualification",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "occupation",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "occupationDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "studentClass",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nameOfOrganisation",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "nameOfOrgDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "organisationType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "organisationTypeDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "industry",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "industryDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "natureOfWork1",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork2",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork3",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork4",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork5",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork6",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork7",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork8",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork9",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork10",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork11",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork12",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork13",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork14",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork15",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork16",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork17",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork18",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureofWorkDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "natureOfWork19",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork20",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "annualIncome",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "idProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "idProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "idProofNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "expDate",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "armedForceId",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "bankKyc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "drivingLicense",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "jobCardByNrega",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ltrWithPhotoAttestedByGazetteOfficer",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ociPioCard",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "pension",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "passport",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "voterIdCard",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "addressProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ageProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "ageProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "incomeProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "incomeProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "AadharExists",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "AadharNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "PAN",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "CKYCFlag",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "CKYCNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "picUpload",
+            "input": "",
+            "type": "file"
+        },
+        {
+            "name": "checkboxTest",
+            "input": "",
+            "type": "checkbox"
+        },
+        {
+            "name": "name",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "countryOfCurrentResidence",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "passportNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "placeOfIssue",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "purposeOfYourStayAbroad",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nameOfUniversity",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "courseDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "durationOfYourStayAbroad",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "purposeOfYourCurrentVisitToIndia",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "visaStatus",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfArrivalInIndia",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "dateWhenYouIntendToLeaveFromIndiaAfterYourCur",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "tinNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ifTinNo,FunctionalEquivalentNumber,CommonIdNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "address",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "landmark",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipcode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mobileNo.WithCountryCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nameOfBank",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "typeOfAccount",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "accountNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressOfBankBranch",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "areYouOrYourCloseRelativeArePepPoliticallyExp",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "pleaseProvideDetailsOfPoliticallyExposed",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "name",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "countryOfBirth",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "nationality",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "countryOfCurrentResidence",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "dateOnWhichYouBecamePermanentResidentOfTheCou",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "doYouHoldOrHadEarlierHeldIndianPassport?",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "passportNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "placeOfIssue",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "provideYourCurrentPassportDetails",
+            "input": "",
+            "type": "static"
+        },
+        {
+            "name": "currentPassportNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "currentDateOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "currentPlaceOfIssue",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ociCardNumber/PioCardNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "purposeOfYourCurrentVisitToIndia",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "visaStatus",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfArrivalInIndia",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "dateWhenYouIntendToLeaveFromIndiaAfterYourCur",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "doYouHaveTaxpayerIdentificationNumber(TinNo)",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "pleaseProvideTheNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "pleaseProvideTheReason",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "address",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "landmark",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipcode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mobileNo.WithCountryCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nonResidentAccountHeldInIndia",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "nameOfBank",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "typeOfAccount",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "accountNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressOfBankBranch",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "areYouOrYourCloseRelativeArePepPoliticallyExp",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "pleaseProvideDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "district",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "country",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "taxResidence",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "sameAddress",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "addressLine1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "district",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "country",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "birthCountry",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "birthPlace",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "FATCAIDType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "FATCAIDNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "occupationType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "noOfTaxationCountries",
+            "input": "",
+            "type": "single-select"
+        }
+    ],
+    "firstLifeAssuredDetails": [
+        {
+            "name": "title",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "maritalStatus",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "birthPlace",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "maidenName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mobileNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "email",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "husbandOrFathersFirstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "husbandOrFatherLastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mothersFirstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mothersLastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "stdNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "landLineNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "identificationMark",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dominantHand",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "residentStatus",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "nationality",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "politicallyExposedPerson",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "policticalDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "qualification",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "occupation",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "occupationDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "studentClass",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nameOfOrganisation",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "nameOfOrgDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "organisationType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "organisationTypeDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "industry",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "industryDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "natureOfWork1",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork2",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork3",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork4",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork5",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork6",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork7",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork8",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork9",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork10",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork11",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork12",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork13",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork14",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork15",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork16",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork17",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureOfWork18",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "natureofWorkDesc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "annualIncome",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "idProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "idProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "idProofNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "expDate",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "armedForceId",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "bankKyc",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "drivingLicense",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "jobCardByNrega",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ltrWithPhotoAttestedByGazetteOfficer",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ociPioCard",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "pension",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "passport",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "voterIdCard",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "addressProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ageProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "ageProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "incomeProof",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "incomeProofOther",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "AadharExists",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "AadharNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "PAN",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "CKYCFlag",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "CKYCNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "picUpload",
+            "input": "",
+            "type": "file"
+        },
+        {
+            "name": "checkboxTest",
+            "input": "",
+            "type": "checkbox"
+        },
+        {
+            "name": "name",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "countryOfCurrentResidence",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "passportNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "placeOfIssue",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "purposeOfYourStayAbroad",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nameOfUniversity",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "courseDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "durationOfYourStayAbroad",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "purposeOfYourCurrentVisitToIndia",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "visaStatus",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfArrivalInIndia",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateWhenYouIntendToLeaveFromIndiaAfterYourCur",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "tinNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ifTinNo,FunctionalEquivalentNumber,CommonIdNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "address",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "landmark",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipcode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mobileNo.WithCountryCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nameOfBank",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "typeOfAccount",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "accountNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressOfBankBranch",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "areYouOrYourCloseRelativeArePepPoliticallyExp",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "pleaseProvideDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "name",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "countryOfBirth",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "nationality",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "countryOfCurrentResidence",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "dateOnWhichYouBecamePermanentResidentOfTheCou",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "doYouHoldOrHadEarlierHeldIndianPassport?",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "currentPassportNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "placeOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "provideYourCurrentPassportDetails",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "passportNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "currentDateOfIssue",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "currentPlaceOfIssue",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ociCardNumber/PioCardNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "purposeOfYourCurrentVisitToIndia",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "visaStatus",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfArrivalInIndia",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "dateWhenYouIntendToLeaveFromIndiaAfterYourCur",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "doYouHaveTaxpayerIdentificationNumber(TinNo)",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "pleaseProvideTheNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "pleaseProvideTheReason",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "address",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "landmark",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipcode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "mobileNo.WithCountryCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "nonResidentAccountHeldInIndia",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "nameOfBank",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "typeOfAccount",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "accountNumber",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressOfBankBranch",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "areYouOrYourCloseRelativeArePepPoliticallyExp",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "pleaseProvideDetails",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "district",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "country",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "taxResidence",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "sameAddress",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "addressLine1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "district",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "zipCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "country",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "birthCountry",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "birthPlace",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "FATCAIDType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "FATCAIDNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "occupationType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "noOfTaxationCountries",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "existingPolicyPresent",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "noOfPolicy",
+            "input": "",
+            "type": "single-select"
+        }
+    ],
+    "eiaDetails": [
+        {
+            "name": "isNewEIA",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "existingEIANo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "existingEIARepository",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "tataAllowedToShareMyInfo",
+            "input": "",
+            "type": "checkbox"
+        }
+    ],
+    "nomineeDetails": [
+        {
+            "name": "title",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "firstName1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth1",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender1",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithNominee1",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare1",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "mwpa1",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "title",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "firstName2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth2",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender2",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithNominee2",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare2",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "mwpa2",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "title",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "firstName3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth3",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender3",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithNominee3",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare3",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "mwpa3",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "title",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "firstName6",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName6",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName6",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth6",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender6",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationshipWithAppointee6",
+            "input": "",
+            "type": "single-select"
+        }
+    ],
+    "beneficiaryDetails": [
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithLa",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithLa",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithLa",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithLa",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "dateOfBirth",
+            "input": "",
+            "type": "date"
+        },
+        {
+            "name": "gender",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "relationWithLa",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "percentageShare",
+            "input": "",
+            "type": "number"
+        }
+    ],
+    "trustee": [
+        {
+            "name": "firstName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "middleName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "lastName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine1",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "addressLine3",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "landmark",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "pinCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "city",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "state",
+            "input": "",
+            "type": "single-select"
+        }
+    ],
+    "otpDetails": [
+        {
+            "name": "otpReqCreatedTime",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "otpReqUpdatedTime",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "otpReqOtpNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "otpReqStatus",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "otpReqExpiryTimeInMin",
+            "input": "",
+            "type": "text"
+        }
+    ],
+    "payoutDetails": [
+        {
+            "name": "accountHolderName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ifscCode",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "bankName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "branchName",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "accountNumber",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "re-EnterAccountNumber",
+            "input": "",
+            "type": "number"
+        },
+        {
+            "name": "accountType",
+            "input": "",
+            "type": "single-select"
+        },
+        {
+            "name": "neftProof",
+            "input": "",
+            "type": "single-select"
+        }
+    ],
+    "ACR": [
+        {
+            "name": "ACR1",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "ACR2",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "ACR3",
+            "input": "",
+            "type": "boolean"
+        },
+        {
+            "name": "ACR4",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "agentMobNo",
+            "input": "",
+            "type": "text"
+        },
+        {
+            "name": "place",
+            "input": "",
+            "type": "text"
+        }
+    ]
+}

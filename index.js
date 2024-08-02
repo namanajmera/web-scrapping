@@ -74,13 +74,18 @@ const scarpping = async () => {
      } catch (error) {
          console.log('Button Not clicked successfully');
      } */
+    // Single Quote
     await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 50000)));
     await page.waitForSelector('#submit-sq', { visible: true, timeout: 50000 });
     await page.click("#submit-sq");
     await page.click("#submit-sq");
     await page.click("#submit-sq");
+
+    // Checkout
     await page.waitForSelector('#checked-out', { visible: true, timeout: 10000 });
     await page.click("#checked-out");
+
+    // Proposal Form
 
 };
 
