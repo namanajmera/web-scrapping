@@ -142,8 +142,37 @@ const fillFormFields = async (page, formData) => {
                     }
 
                     const radioButtons = await page.$$(`label[name="${field.name}"]`);
+
+                    const clickLabel = async (index) => {
+                        const label = radioButtons[index];
+                        await page.evaluate((label) => {
+                            label.scrollIntoView({ block: 'center', inline: 'center' });
+                        }, label);
+                        await label.click();
+                    };
+
                     if (radioButtons.length > 0) {
-                        field.input === "0" ? await radioButtons[1].click() : await radioButtons[0].click();
+                        const retries = 3;
+                        let clicked = false;
+
+                        for (let i = 0; i < retries; i++) {
+                            try {
+                                if (field.input === "0") {
+                                    await clickLabel(1);
+                                } else {
+                                    await clickLabel(0);
+                                }
+                                clicked = true;
+                                break;
+                            } catch (err) {
+                                console.log(`Retrying click for "${field.name}", attempt ${i + 1}`);
+                                await page.waitForTimeout(200); // Wait before retrying
+                            }
+                        }
+
+                        if (!clicked) {
+                            console.log(`Failed to click the label for "${field.name}" after ${retries} attempts`);
+                        }
                     }
 
                 } else if (field.type === "checkbox") {
@@ -190,7 +219,7 @@ const fillFormFields = async (page, formData) => {
                     /* await page.evaluate((name, input) => {
                         const inputElement = document.querySelector(`input[name="${name}"]`);
                         inputElement.value = input;
-                    }, field.name, field.input); */ 
+                    }, field.name, field.input); */
 
                 }
             } catch (error) {
