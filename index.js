@@ -163,17 +163,34 @@ const fillFormFields = async (page, formData) => {
                     if (checkbox) {
                         const isChecked = await page.evaluate(checkbox => checkbox.checked, checkbox);
                         if (isChecked !== field.input) {
-                            await checkbox.click(); 
+                            await checkbox.click();
                         }
                     }
 
                 } else if (field.type === "file") {
                     await page.waitForSelector(`input[type="file"][name="${field.name}"]`, { visible: true });
 
-                    const filePath = './20190.jpg'; 
+                    const filePath = './20190.jpg';
                     const inputHandle = await page.$(`input[type="file"][name="${field.name}"]`);
 
                     await inputHandle.uploadFile(filePath);
+                } else if (field.type === "number") {
+                    await page.waitForSelector(`input[name="${field.name}"]`, { visible: true, timeout: 500 });
+
+                    const isDisabled = await page.evaluate((name) => {
+                        const input = document.querySelector(`input[name="${name}"]`);
+                        return input ? input.disabled : false;
+                    }, field.name);
+
+                    if (isDisabled) {
+                        console.log(`Field "${field.name}" is disabled, skipping...`);
+                        continue;
+                    }
+                    await page.type(`input[name="${field.name}"]`, field.input.toString());
+                    /* await page.evaluate((name, input) => {
+                        const inputElement = document.querySelector(`input[name="${name}"]`);
+                        inputElement.value = input;
+                    }, field.name, field.input); */ 
 
                 }
             } catch (error) {
@@ -182,6 +199,7 @@ const fillFormFields = async (page, formData) => {
         }
     }
 };
+
 
 
 /* const getResponseData = async (page, endPoint) => {

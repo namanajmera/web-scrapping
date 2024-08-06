@@ -1,78 +1,44 @@
 {
     "payoutDetails": [
         {
-            "name": "accountHolderName",
-            "input": "test",
-            "type": "text",
-            "value": null
+          "name": "accountHolderName",
+          "input": "Testing Data",
+          "type": "text"
         },
         {
-            "name": "ifscCode",
-            "input": "test",
-            "type": "text",
-            "value": null
+          "name": "ifscCode",
+          "input": "SBIN0000454",
+          "type": "text"
         },
         {
-            "name": "bankName",
-            "input": "test",
-            "type": "text",
-            "value": null
+          "name": "bankName",
+          "input": "STATE BANK OF INDIA",
+          "type": "text"
         },
         {
-            "name": "branchName",
-            "input": "test",
-            "type": "text",
-            "value": null
+          "name": "branchName",
+          "input": "PUNE",
+          "type": "text"
         },
         {
-            "name": "accountNumber",
-            "input": "test",
-            "type": "number",
-            "value": []
+          "name": "accountNumber",
+          "input": 11111111111111110000,
+          "type": "number"
         },
         {
-            "name": "re-EnterAccountNumber",
-            "input": "test",
-            "type": "number",
-            "value": []
+          "name": "re-EnterAccountNumber",
+          "input": 11111111111111110000,
+          "type": "number"
         },
         {
-            "name": "accountType",
-            "input": "current",
-            "type": "single-select",
-            "value": [
-                {
-                    "Text": "Current",
-                    "Value": "current"
-                },
-                {
-                    "Text": "Non-Resident External",
-                    "Value": "nre"
-                },
-                {
-                    "Text": "Non Resident Ordinary Account",
-                    "Value": "nro"
-                },
-                {
-                    "Text": "Saving",
-                    "Value": "saving"
-                }
-            ]
+          "name": "accountType",
+          "input": "saving",
+          "type": "single-select"
         },
         {
-            "name": "neftProof",
-            "input": "NEFT bank Statement",
-            "type": "single-select",
-            "value": [
-                {
-                    "Text": "NEFT bank Statement",
-                    "Value": "NEFT bank Statement"
-                },
-                {
-                    "Text": "NEFT cheque copy",
-                    "Value": "NEFT cheque copy"
-                }
-            ]
+          "name": "neftProof",
+          "input": "NEFT bank Statement",
+          "type": "single-select"
         }
-    ]
+      ]
 }

@@ -1,38 +1,19 @@
 {
     "eiaDetails": [
         {
-            "name": "isNewEIA",
-            "input": "test",
-            "type": "boolean",
-            "value": null
+          "name": "isNewEIA",
+          "input": "0",
+          "type": "boolean"
         },
         {
-            "name": "existingEIANo",
-            "input": "test",
-            "type": "text",
-            "value": null
+          "name": "existingEIARepository",
+          "input": "NSDL",
+          "type": "single-select"
         },
         {
-            "name": "existingEIARepository",
-            "input": "NSDL",
-            "type": "single-select",
-            "value": [
-                {
-                    "Text": "NSDL Data Management Ltd",
-                    "Value": "NSDL"
-                }
-            ]
-        },
-        {
-            "name": "tataAllowedToShareMyInfo",
-            "input": "Tata  AIA  is allowed to share my personal information to IR(Insurance Repository) for EIA creation",
-            "type": "checkbox",
-            "value": [
-                {
-                    "Text": "Tata  AIA  is allowed to share my personal information to IR(Insurance Repository) for EIA creation",
-                    "Value": "Tata  AIA  is allowed to share my personal information to IR(Insurance Repository) for EIA creation"
-                }
-            ]
+          "name": "tataAllowedToShareMyInfo",
+          "input": true,
+          "type": "checkbox"
         }
-    ]
+      ]
 }

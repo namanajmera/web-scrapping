@@ -7,15 +7,15 @@ async function fetchData() {
         let config = {
             method: "get",
             maxBodyLength: Infinity,
-            url: "https://dev.insurance.api.1silverbullet.tech/v2/lifesave/proposal?product_id=FGPlus&manufacturer_id=TATA&version=1",
+            url: "https://dev.insurance.api.1silverbullet.tech/v2/lifesave/proposal/draft?journey_id=6b592449-23d5-4fde-858a-10512dc699e1",
             headers: {
                 Authorization:
-                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQQVlMT0FEIjp7ImV4dGVybmFsUmVmZXJlbmNlSWQiOiIiLCJyZWdpb25JZCI6IiIsInJvbGVJZCI6IjIiLCJ1c2VyaWQiOiI4OTI1IiwidXNlclR5cGUiOiJBQyIsImJyYW5jaElkIjoiIiwiY2hhbm5lbFR5cGUiOiIiLCJjdXN0b21lclR5cGUiOiIiLCJlbWFpbElkIjoiIiwidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsImpvdXJuZXlfaWQiOiIiLCJybUNvZGUiOiIiLCJ2YXJGaWVsZHMiOltdfSwiZXhwaXJlcyI6MTcyMjU5OTE0My43MTAwMjV9.9ywisZ3_RrpEWB1LU63iD6gZ6MPN-jw3qR8vsWeGf9c",
+                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQQVlMT0FEIjp7ImV4dGVybmFsUmVmZXJlbmNlSWQiOiIiLCJyZWdpb25JZCI6IiIsInJvbGVJZCI6IjEiLCJ1c2VyaWQiOiI4OTI1IiwidXNlclR5cGUiOiJBQyIsImJyYW5jaElkIjoiIiwiY2hhbm5lbFR5cGUiOiIiLCJjdXN0b21lclR5cGUiOiIiLCJlbWFpbElkIjoiIiwidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAxMCIsImpvdXJuZXlfaWQiOiIiLCJybUNvZGUiOiIiLCJ2YXJGaWVsZHMiOltdfSwiZXhwaXJlcyI6MTcyMjk2ODI1NC43MTM0NzEyfQ.9fQuyZphVt2VvBCpG5sB2wiTHyUjR7_qQzmNhv0wTOs",
             },
         };
 
         const response = await axios.request(config);
-        const extractedValue = response.data.data.fieldGroups;
+        const extractedValue = response.data.data.proposal.proposal_json.fieldGroups;
         const excludeNames = ["traceInfo", "distributor"];
         const formData = {};
 
@@ -26,17 +26,15 @@ async function fetchData() {
             Object.keys(fields).forEach((field) => {
                 const fieldData = fields[field];
                 // Ensure that fieldData.value is an array and handle it properly
-                const inputValue = fieldData.value && Array.isArray(fieldData.value) && fieldData.value.length > 0
-                    ? fieldData.value[0].Value // Adjust this based on your actual data structure
-                    : "test";
-
-                const newData = {
-                    name: fieldData.name,
-                    input: inputValue,
-                    type: fieldData.type,
-                    value: fieldData.value
-                };
-                formData[parentName].push(newData);
+                if(fieldData.input){
+                    const newData = {
+                        name: fieldData.name,
+                        input: fieldData.type === 'file' ? '' : fieldData.input,
+                        type: fieldData.type,
+                        value: fieldData.value
+                    };
+                    formData[parentName].push(newData);
+                }
             });
         };
 
