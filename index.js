@@ -18,7 +18,7 @@ const scarpping = async () => {
 
     await page.goto(
         // "http://localhost:8080/#/?id=00000000-0000-0000-0000-000000000000"
-        "http://localhost:8080/#/?id=00000000-0000-0000-0000-000000000000&manufacturerId=TATA"
+        "http://localhost:8081/#/?id=00000000-0000-0000-0000-000000000000&manufacturerId=TATA"
     );
 
     // First page (Home Page)
@@ -92,7 +92,7 @@ async function loadFormData(pageNumber) {
 
 async function waitForPageAndFillForm(page, pageNumber) {
     const formData = await loadFormData(pageNumber);
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 30000)));
     console.log(`Start page ${pageNumber}`);
     await fillFormFields(page, formData);
     console.log(`done form page ${pageNumber}`);
