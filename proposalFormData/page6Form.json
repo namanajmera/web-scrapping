@@ -1,3 +1,19 @@
 {
-    "ACR": []
+    "ACR": [
+        {
+            "name": "ACR1",
+            "input": "0",
+            "type": "boolean"
+        },
+        {
+            "name": "agentMobNo",
+            "input": "9876543456",
+            "type": "text"
+        },
+        {
+            "name": "place",
+            "input": "pune",
+            "type": "text"
+        }
+    ]
 }

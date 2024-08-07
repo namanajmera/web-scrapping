@@ -1,39 +1,39 @@
 {
-    "nomineeDetails": [
-        {
-          "name": "title",
-          "input": "mr.",
-          "type": "single-select"
-        },
-        {
-          "name": "firstName1",
-          "input": "Testing G",
-          "type": "text"
-        },
-        {
-          "name": "lastName1",
-          "input": "Data",
-          "type": "text"
-        },
-        {
-          "name": "dateOfBirth1",
-          "input": "1999-11-11",
-          "type": "date"
-        },
-        {
-          "name": "relationWithNominee1",
-          "input": "brother",
-          "type": "single-select"
-        },
-        {
-          "name": "percentageShare1",
-          "input": 100,
-          "type": "number"
-        },
-        {
-          "name": "selectNumberOfnominees",
-          "input": "1",
-          "type": "single-select"
-        }
-      ]
+  "nomineeDetails": [
+    {
+      "name": "selectNumberOfnominees",
+      "input": "1",
+      "type": "single-select"
+    },
+    {
+      "name": "title",
+      "input": "mr.",
+      "type": "single-select"
+    },
+    {
+      "name": "firstName1",
+      "input": "Testing G",
+      "type": "text"
+    },
+    {
+      "name": "lastName1",
+      "input": "Data",
+      "type": "text"
+    },
+    {
+      "name": "dateOfBirth1",
+      "input": "11-11-1999",
+      "type": "date"
+    },
+    {
+      "name": "relationWithNominee1",
+      "input": "brother",
+      "type": "single-select"
+    },
+    {
+      "name": "percentageShare1",
+      "input": 100,
+      "type": "number"
+    }
+  ]
 }

@@ -58,8 +58,8 @@ const scarpping = async () => {
         console.log('Button Not clicked successfully');
     }
     // Single Quote
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 50000)));
-    await page.waitForSelector('#submit-sq', { visible: true, timeout: 50000 });
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 30000)));
+    await page.waitForSelector('#submit-sq', { visible: true, timeout: 30000 });
     await page.click("#submit-sq");
     await page.click("#submit-sq");
     await page.click("#submit-sq");
@@ -77,7 +77,7 @@ const scarpping = async () => {
     console.log('Start page 1')
     await fillFormFields(page, proposalFormPage1);
     console.log('done form page 1')
-    await page.click("#submit-proposal-form");
+    await page.click("#submit");
 
     const proposalForm2RawData = fs.readFileSync("./proposalFormData/page2Form.json");
     const proposalFormPage2 = JSON.parse(proposalForm2RawData);
@@ -85,18 +85,58 @@ const scarpping = async () => {
     console.log('Start page 2')
     await fillFormFields(page, proposalFormPage2);
     console.log('done form page2')
-    // await page.click("#submit-proposal-form");
+    /*     await page.evaluate(() => {
+            const button = document.getElementsByTagName('button');
+            console.log('button =>', button);
+            if (button) button.submit.click();
+        }) */
+
+    // Page 3
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    const proposalForm3RawData = fs.readFileSync("./proposalFormData/page3Form.json");
+    const proposalFormPage3 = JSON.parse(proposalForm3RawData);
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    console.log('Start page 3')
+    await fillFormFields(page, proposalFormPage3);
+    console.log('done form page3')
+
+    // Page 4
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    const proposalForm4RawData = fs.readFileSync("./proposalFormData/page4Form.json");
+    const proposalFormPage4 = JSON.parse(proposalForm4RawData);
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    console.log('Start page 4')
+    await fillFormFields(page, proposalFormPage4, 2000);
+    console.log('done form page 4')
+
+    // Page 5
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    const proposalForm5RawData = fs.readFileSync("./proposalFormData/page5Form.json");
+    const proposalFormPage5 = JSON.parse(proposalForm5RawData);
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    console.log('Start page 5')
+    await fillFormFields(page, proposalFormPage5, 1500);
+    console.log('done form page 5')
+
+    // Page 6
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    const proposalForm6RawData = fs.readFileSync("./proposalFormData/page6Form.json");
+    const proposalFormPage6 = JSON.parse(proposalForm6RawData);
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    console.log('Start page 6')
+    await fillFormFields(page, proposalFormPage6);
+    console.log('done form page 6')
 };
 
 scarpping();
 
-const fillFormFields = async (page, formData) => {
+const fillFormFields = async (page, formData, timeoutTime = 500) => {
     for (const key of Object.keys(formData)) {
         const fields = formData[key];
         for (const field of fields) {
             try {
                 if (field.type === "text" || field.type === "currency") {
-                    await page.waitForSelector(`input[name="${field.name}"]`, { visible: true, timeout: 500 });
+                    await page.waitForSelector(`input[name="${field.name}"]`, { visible: true, timeout: timeoutTime });
 
                     const isDisabled = await page.evaluate((name) => {
                         const input = document.querySelector(`input[name="${name}"]`);
@@ -114,7 +154,7 @@ const fillFormFields = async (page, formData) => {
                     await page.type(`input[name="${field.name}"]`, field.input);
 
                 } else if (field.type === "single-select") {
-                    await page.waitForSelector(`select[name="${field.name}"]`, { visible: true, timeout: 500 });
+                    await page.waitForSelector(`select[name="${field.name}"]`, { visible: true, timeout: timeoutTime });
 
                     const isDisabled = await page.evaluate((name) => {
                         const select = document.querySelector(`select[name="${name}"]`);
@@ -129,7 +169,7 @@ const fillFormFields = async (page, formData) => {
                     await page.select(`select[name="${field.name}"]`, field.input);
 
                 } else if (field.type === "boolean") {
-                    await page.waitForSelector(`label[name="${field.name}"]`, { visible: true, timeout: 500 });
+                    await page.waitForSelector(`label[name="${field.name}"]`, { visible: true, timeout: timeoutTime });
 
                     const isDisabled = await page.evaluate((name) => {
                         const labels = document.querySelectorAll(`label[name="${name}"]`);
@@ -176,7 +216,7 @@ const fillFormFields = async (page, formData) => {
                     }
 
                 } else if (field.type === "checkbox") {
-                    await page.waitForSelector(`input[type="checkbox"][name="${field.name}"]`, { visible: true, timeout: 500 });
+                    await page.waitForSelector(`input[type="checkbox"][name="${field.name}"]`, { visible: true, timeout: timeoutTime });
 
                     const isDisabled = await page.evaluate((name) => {
                         const checkbox = document.querySelector(`input[type="checkbox"][name="${name}"]`);
@@ -204,7 +244,7 @@ const fillFormFields = async (page, formData) => {
 
                     await inputHandle.uploadFile(filePath);
                 } else if (field.type === "number") {
-                    await page.waitForSelector(`input[name="${field.name}"]`, { visible: true, timeout: 500 });
+                    await page.waitForSelector(`input[name="${field.name}"]`, { visible: true, timeout: timeoutTime });
 
                     const isDisabled = await page.evaluate((name) => {
                         const input = document.querySelector(`input[name="${name}"]`);
@@ -215,6 +255,7 @@ const fillFormFields = async (page, formData) => {
                         console.log(`Field "${field.name}" is disabled, skipping...`);
                         continue;
                     }
+                    await page.type(`input[name="${field.name}"]`, '');
                     await page.type(`input[name="${field.name}"]`, field.input.toString());
                     /* await page.evaluate((name, input) => {
                         const inputElement = document.querySelector(`input[name="${name}"]`);

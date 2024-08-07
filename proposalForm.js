@@ -10,7 +10,7 @@ async function fetchData() {
             url: "https://dev.insurance.api.1silverbullet.tech/v2/lifesave/proposal/draft?journey_id=6b592449-23d5-4fde-858a-10512dc699e1",
             headers: {
                 Authorization:
-                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQQVlMT0FEIjp7ImV4dGVybmFsUmVmZXJlbmNlSWQiOiIiLCJyZWdpb25JZCI6IiIsInJvbGVJZCI6IjEiLCJ1c2VyaWQiOiI4OTI1IiwidXNlclR5cGUiOiJBQyIsImJyYW5jaElkIjoiIiwiY2hhbm5lbFR5cGUiOiIiLCJjdXN0b21lclR5cGUiOiIiLCJlbWFpbElkIjoiIiwidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAxMCIsImpvdXJuZXlfaWQiOiIiLCJybUNvZGUiOiIiLCJ2YXJGaWVsZHMiOltdfSwiZXhwaXJlcyI6MTcyMjk2ODI1NC43MTM0NzEyfQ.9fQuyZphVt2VvBCpG5sB2wiTHyUjR7_qQzmNhv0wTOs",
+                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQQVlMT0FEIjp7ImV4dGVybmFsUmVmZXJlbmNlSWQiOiIiLCJyZWdpb25JZCI6IiIsInJvbGVJZCI6IjIiLCJ1c2VyaWQiOiI4OTI1IiwidXNlclR5cGUiOiJBQyIsImJyYW5jaElkIjoiIiwiY2hhbm5lbFR5cGUiOiIiLCJjdXN0b21lclR5cGUiOiIiLCJlbWFpbElkIjoiIiwidHJhbnNhY3Rpb25JZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsImpvdXJuZXlfaWQiOiIiLCJybUNvZGUiOiIiLCJ2YXJGaWVsZHMiOltdfSwiZXhwaXJlcyI6MTcyMzAxOTQ5My4yNDU0NjcyfQ.mcY_VRqYHz3fg4kM_HghjGAu4shC5jOmxaAPTEAfTZM",
             },
         };
 
@@ -31,7 +31,6 @@ async function fetchData() {
                         name: fieldData.name,
                         input: fieldData.type === 'file' ? '' : fieldData.input,
                         type: fieldData.type,
-                        value: fieldData.value
                     };
                     formData[parentName].push(newData);
                 }
