@@ -1,3 +1,6 @@
+import fs from "fs";
+const path = './savingsGateCriteria.json';
+
 const data = {
     eligibilityMapping: {
         fieldGroups: {
@@ -655,7 +658,7 @@ const extractFieldsFromGroup = (fieldGroupName) => {
         return {
             name: field.name,
             type: field.type,
-            value: field.value,
+            input: field.input,
         };
     });
 };
@@ -668,4 +671,12 @@ const newData = {
     personalInformation: personalInformationFields,
     suitabilityDetail: suitabilityDetailFields,
 };
+
+fs.writeFile(path, JSON.stringify(newData, null, 2), 'utf8', (err) => {
+    if (err) {
+        console.error("Error writing to file:", err);
+    } else {
+        console.log("formData successfully written to proposalForm.json");
+    }
+});
 console.log(newData);
