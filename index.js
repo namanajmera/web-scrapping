@@ -68,67 +68,28 @@ const scarpping = async () => {
     await page.waitForSelector('#checked-out', { visible: true, timeout: 10000 });
     await page.click("#checked-out");
 
-    // Proposal Form
-    const proposalForm1RawData = fs.readFileSync("./proposalFormData/page1Form.json");
-    const proposalFormPage1 = JSON.parse(proposalForm1RawData);
-    await page.waitForSelector("#relationWithLA", {
-        visible: true,
-    });
-    console.log('Start page 1')
-    await fillFormFields(page, proposalFormPage1);
-    console.log('done form page 1')
-    await page.click("#submit");
-
-    const proposalForm2RawData = fs.readFileSync("./proposalFormData/page2Form.json");
-    const proposalFormPage2 = JSON.parse(proposalForm2RawData);
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    console.log('Start page 2')
-    await fillFormFields(page, proposalFormPage2);
-    console.log('done form page2')
-    /*     await page.evaluate(() => {
-            const button = document.getElementsByTagName('button');
-            console.log('button =>', button);
-            if (button) button.submit.click();
-        }) */
-
-    // Page 3
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    const proposalForm3RawData = fs.readFileSync("./proposalFormData/page3Form.json");
-    const proposalFormPage3 = JSON.parse(proposalForm3RawData);
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    console.log('Start page 3')
-    await fillFormFields(page, proposalFormPage3);
-    console.log('done form page3')
-
-    // Page 4
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    const proposalForm4RawData = fs.readFileSync("./proposalFormData/page4Form.json");
-    const proposalFormPage4 = JSON.parse(proposalForm4RawData);
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    console.log('Start page 4')
-    await fillFormFields(page, proposalFormPage4, 2000);
-    console.log('done form page 4')
-
-    // Page 5
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    const proposalForm5RawData = fs.readFileSync("./proposalFormData/page5Form.json");
-    const proposalFormPage5 = JSON.parse(proposalForm5RawData);
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    console.log('Start page 5')
-    await fillFormFields(page, proposalFormPage5, 1500);
-    console.log('done form page 5')
-
-    // Page 6
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    const proposalForm6RawData = fs.readFileSync("./proposalFormData/page6Form.json");
-    const proposalFormPage6 = JSON.parse(proposalForm6RawData);
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
-    console.log('Start page 6')
-    await fillFormFields(page, proposalFormPage6);
-    console.log('done form page 6')
+    for (let i = 1; i <= 6; i++) {
+        await waitForPageAndFillForm(page, i);
+        if (i < 6) {
+            // await page.click("#submit");
+        }
+    }
 };
 
 scarpping();
+
+async function loadFormData(pageNumber) {
+    const rawData = fs.readFileSync(`./proposalFormData/page${pageNumber}Form.json`);
+    return JSON.parse(rawData);
+}
+
+async function waitForPageAndFillForm(page, pageNumber) {
+    const formData = await loadFormData(pageNumber);
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 10000)));
+    console.log(`Start page ${pageNumber}`);
+    await fillFormFields(page, formData);
+    console.log(`done form page ${pageNumber}`);
+}
 
 const fillFormFields = async (page, formData, timeoutTime = 500) => {
     for (const key of Object.keys(formData)) {
@@ -269,29 +230,3 @@ const fillFormFields = async (page, formData, timeoutTime = 500) => {
         }
     }
 };
-
-
-
-/* const getResponseData = async (page, endPoint) => {
-  return new Promise((resolve, reject) => {
-    page.on("response", async (response) => {
-      const url = response.url();
-
-      // Ensure we only handle the desired endpoint
-      if (url.includes(endPoint)) {
-        try {
-          const json = await response; // Attempt to parse JSON
-          console.log('json', json)
-          resolve(json);
-        } catch (error) {
-          reject(new Error(`Failed to parse response body: ${error.message}`));
-        }
-      }
-    });
-
-    // Optionally, set a timeout to avoid waiting indefinitely
-    setTimeout(() => {
-      reject(new Error(`Response not received for endpoint: ${endPoint}`));
-    }, 10000); // Adjust the timeout as needed
-  });
-}; */
