@@ -1,209 +1,214 @@
 {
-    "proposerDetails": [
-        {
-          "name": "relationWithLA",
-          "input": "Self",
-          "type": "single-select"
-        },
-        {
-          "name": "title",
-          "input": "mr.",
-          "type": "single-select"
-        },
-        {
-          "name": "firstName",
-          "input": "Testing",
-          "type": "text"
-        },
-        {
-          "name": "lastName",
-          "input": "Data",
-          "type": "text"
-        },
-        {
-          "name": "maritalStatus",
-          "input": "unmarried",
-          "type": "single-select"
-        },
-        {
-          "name": "dateOfBirth",
-          "input": "1999-11-11",
-          "type": "date"
-        },
-        {
-          "name": "gender",
-          "input": "male",
-          "type": "single-select"
-        },
-        {
-          "name": "mobileNumber",
-          "input": "8696696426",
-          "type": "text"
-        },
-        {
-          "name": "email",
-          "input": "naman.ajmera@1silverbullet.tech",
-          "type": "text"
-        },
-        {
-          "name": "husbandOrFathersFirstName",
-          "input": "Testing",
-          "type": "text"
-        },
-        {
-          "name": "husbandOrFatherLastName",
-          "input": "Data",
-          "type": "text"
-        },
-        {
-          "name": "mothersFirstName",
-          "input": "Testing",
-          "type": "text"
-        },
-        {
-          "name": "mothersLastName",
-          "input": "Data",
-          "type": "text"
-        },
-        {
-          "name": "residentStatus",
-          "input": "resident-Others",
-          "type": "single-select"
-        },
-        {
-          "name": "nationality",
-          "input": "india",
-          "type": "single-select"
-        },
-        {
-          "name": "politicallyExposedPerson",
-          "input": "0",
-          "type": "boolean"
-        },
-        {
-          "name": "qualification",
-          "input": "postGraduate",
-          "type": "single-select"
-        },
-        {
-          "name": "occupation",
-          "input": "salaried",
-          "type": "single-select"
-        },
-        {
-          "name": "nameOfOrganisation",
-          "input": "2020ImagingIndiaLimited",
-          "type": "single-select"
-        },
-        {
-          "name": "organisationType",
-          "input": "governmentEstablishment",
-          "type": "single-select"
-        },
-        {
-          "name": "industry",
-          "input": "armed&AlliedForces",
-          "type": "single-select"
-        },
-        {
-          "name": "natureOfWork13",
-          "input": "adminDutiesOnlyPeonOfficeBoyClerkSupportStaffAllBranchesOfArmed&AlliedForces",
-          "type": "single-select"
-        },
-        {
-          "name": "annualIncome",
-          "input": "1000000",
-          "type": "text"
-        },
-        {
-          "name": "idProof",
-          "input": "aadharCardUid",
-          "type": "single-select"
-        },
-        {
-          "name": "idProofNumber",
-          "input": "1231",
-          "type": "text"
-        },
-        {
-          "name": "addressProof",
-          "input": "aadharCardUid",
-          "type": "single-select"
-        },
-        {
-          "name": "ageProof",
-          "input": "aadharIdCardStandard",
-          "type": "single-select"
-        },
-        {
-          "name": "incomeProof",
-          "input": "agriculturalLandHoldingRecordsCropSalesRcpt",
-          "type": "single-select"
-        },
-        {
-          "name": "PAN",
-          "input": "QWAQE1212E",
-          "type": "text"
-        },
-        {
-          "name": "CKYCFlag",
-          "input": "0",
-          "type": "boolean"
-        },
-        {
-          "name": "picUpload",
-          "input": "",
-          "type": "file"
-        },
-        {
-          "name": "addressLine1",
-          "input": "Testing",
-          "type": "text"
-        },
-        {
-          "name": "addressLine2",
-          "input": "Dataaaa",
-          "type": "text"
-        },
-        {
-          "name": "addressLine3",
-          "input": "dadas",
-          "type": "text"
-        },
-        {
-          "name": "district",
-          "input": "Data",
-          "type": "text"
-        },
-        {
-          "name": "zipCode",
-          "input": "411014",
-          "type": "text"
-        },
-        {
-          "name": "city",
-          "input": "PUNE",
-          "type": "text"
-        },
-        {
-          "name": "state",
-          "input": "MAHARASHTRA",
-          "type": "single-select"
-        },
-        {
-          "name": "country",
-          "input": "india",
-          "type": "single-select"
-        },
-        {
-          "name": "taxResidence",
-          "input": "0",
-          "type": "boolean"
-        },
-        {
-          "name": "sameAddress",
-          "input": "1",
-          "type": "boolean"
-        }
-      ]
+  "proposerDetails": [
+    {
+      "name": "relationWithLA",
+      "input": "Self",
+      "type": "single-select"
+    },
+    {
+      "name": "title",
+      "input": "mr.",
+      "type": "single-select"
+    },
+    {
+      "name": "firstName",
+      "input": "Testing",
+      "type": "text"
+    },
+    {
+      "name": "lastName",
+      "input": "Data",
+      "type": "text"
+    },
+    {
+      "name": "maritalStatus",
+      "input": "unmarried",
+      "type": "single-select"
+    },
+    {
+      "name": "dateOfBirth",
+      "input": "1999-11-11",
+      "type": "date"
+    },
+    {
+      "name": "gender",
+      "input": "male",
+      "type": "single-select"
+    },
+    {
+      "name": "mobileNumber",
+      "input": "8696696426",
+      "type": "text"
+    },
+    {
+      "name": "email",
+      "input": "naman.ajmera@1silverbullet.tech",
+      "type": "text"
+    },
+    {
+      "name": "husbandOrFathersFirstName",
+      "input": "Testing",
+      "type": "text"
+    },
+    {
+      "name": "husbandOrFatherLastName",
+      "input": "Data",
+      "type": "text"
+    },
+    {
+      "name": "mothersFirstName",
+      "input": "Testing",
+      "type": "text"
+    },
+    {
+      "name": "mothersLastName",
+      "input": "Data",
+      "type": "text"
+    },
+    {
+      "name": "residentStatus",
+      "input": "resident-Others",
+      "type": "single-select"
+    },
+    {
+      "name": "nationality",
+      "input": "india",
+      "type": "single-select"
+    },
+    {
+      "name": "politicallyExposedPerson",
+      "input": "0",
+      "type": "boolean"
+    },
+    {
+      "name": "qualification",
+      "input": "postGraduate",
+      "type": "single-select"
+    },
+    {
+      "name": "occupation",
+      "input": "salaried",
+      "type": "single-select"
+    },
+    {
+      "name": "nameOfOrganisation",
+      "input": "2020ImagingIndiaLimited",
+      "type": "single-select"
+    },
+    {
+      "name": "organisationType",
+      "input": "governmentEstablishment",
+      "type": "single-select"
+    },
+    {
+      "name": "industry",
+      "input": "armed&AlliedForces",
+      "type": "single-select"
+    },
+    {
+      "name": "natureOfWork13",
+      "input": "adminDutiesOnlyPeonOfficeBoyClerkSupportStaffAllBranchesOfArmed&AlliedForces",
+      "type": "single-select"
+    },
+    {
+      "name": "annualIncome",
+      "input": "1000000",
+      "type": "text"
+    },
+    {
+      "name": "idProof",
+      "input": "aadharCardUid",
+      "type": "single-select"
+    },
+    {
+      "name": "idProofNumber",
+      "input": "1231",
+      "type": "text"
+    },
+    {
+      "name": "addressProof",
+      "input": "aadharCardUid",
+      "type": "single-select"
+    },
+    {
+      "name": "ageProof",
+      "input": "aadharIdCardStandard",
+      "type": "single-select"
+    },
+    {
+      "name": "incomeProof",
+      "input": "agriculturalLandHoldingRecordsCropSalesRcpt",
+      "type": "single-select"
+    },
+    {
+      "name": "PAN",
+      "input": "QWAQE1212E",
+      "type": "text"
+    },
+    {
+      "name": "CKYCFlag",
+      "input": "0",
+      "type": "boolean"
+    },
+    {
+      "name": "picUpload",
+      "input": "",
+      "type": "file"
+    },
+    {
+      "name": "checkboxTest",
+      "type": "checkbox",
+      "input": true
+    },
+    {
+      "name": "addressLine1",
+      "input": "Testing",
+      "type": "text"
+    },
+    {
+      "name": "addressLine2",
+      "input": "Dataaaa",
+      "type": "text"
+    },
+    {
+      "name": "addressLine3",
+      "input": "dadas",
+      "type": "text"
+    },
+    {
+      "name": "district",
+      "input": "Data",
+      "type": "text"
+    },
+    {
+      "name": "zipCode",
+      "input": "411014",
+      "type": "text"
+    },
+    {
+      "name": "city",
+      "input": "PUNE",
+      "type": "text"
+    },
+    {
+      "name": "state",
+      "input": "MAHARASHTRA",
+      "type": "single-select"
+    },
+    {
+      "name": "country",
+      "input": "india",
+      "type": "single-select"
+    },
+    {
+      "name": "taxResidence",
+      "input": "0",
+      "type": "boolean"
+    },
+    {
+      "name": "sameAddress",
+      "input": "1",
+      "type": "boolean"
+    }
+  ]
 }

@@ -177,26 +177,43 @@ const fillFormFields = async (page, formData, timeoutTime = 500) => {
                     }
 
                 } else if (field.type === "checkbox") {
-                    await page.waitForSelector(`input[type="checkbox"][name="${field.name}"]`, { visible: true, timeout: timeoutTime });
+                    try {
+                        const checkboxSelector = `label[name="${field.name}"]`;
 
-                    const isDisabled = await page.evaluate((name) => {
-                        const checkbox = document.querySelector(`input[type="checkbox"][name="${name}"]`);
-                        return checkbox ? checkbox.disabled : false;
-                    }, field.name);
+                        await page.waitForSelector(checkboxSelector, { visible: true, timeout: timeoutTime });
 
-                    if (isDisabled) {
-                        console.log(`Field "${field.name}" is disabled, skipping...`);
-                        continue;
-                    }
+                        const isDisabled = await page.evaluate((selector) => {
+                            const checkbox = document.querySelector(selector);
+                            return checkbox ? checkbox.disabled : false;
+                        }, checkboxSelector);
 
-                    const checkbox = await page.$(`input[type="checkbox"][name="${field.name}"]`);
-                    if (checkbox) {
-                        const isChecked = await page.evaluate(checkbox => checkbox.checked, checkbox);
+                        if (isDisabled) {
+                            console.log(`Field "${field.name}" is disabled, skipping...`);
+                            continue;
+                        }
+
+                        await page.evaluate((selector) => {
+                            const checkbox = document.querySelector(selector);
+                            if (checkbox) {
+                                checkbox.scrollIntoView();
+                            }
+                        }, checkboxSelector);
+
+                        const checkbox = await page.$(checkboxSelector);
+                        if (!checkbox) {
+                            throw new Error(`Checkbox "${field.name}" not found`);
+                        }
+
+                        const isChecked = await page.evaluate((checkbox) => checkbox.checked, checkbox);
+
                         if (isChecked !== field.input) {
                             await checkbox.click();
+                            console.log(`Checkbox "${field.name}" clicked`);
                         }
-                    }
 
+                    } catch (error) {
+                        console.error(`Error processing checkbox "${field.name}": ${error.message}`);
+                    }
                 } else if (field.type === "file") {
                     await page.waitForSelector(`input[type="file"][name="${field.name}"]`, { visible: true });
 
