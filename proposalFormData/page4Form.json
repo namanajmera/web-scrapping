@@ -22,7 +22,7 @@
     },
     {
       "name": "dateOfBirth1",
-      "input": "11-11-1999",
+      "input": "2000-11-11",
       "type": "date"
     },
     {

@@ -46,7 +46,7 @@
       "name": "dateOfBirth",
       "type": "date",
       "value": null,
-      "input": "11-11-1999"
+      "input": "1999-11-11"
     },
     {
       "name": "doYouConsumeTobacco",

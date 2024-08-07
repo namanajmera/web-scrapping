@@ -1,5 +1,7 @@
 import puppeteer from "puppeteer";
 import fs from "fs";
+import moment from 'moment';
+
 
 const scarpping = async () => {
     const browser = await puppeteer.launch({
@@ -15,8 +17,8 @@ const scarpping = async () => {
     await page.setViewport({ width, height: 640 });
 
     await page.goto(
-        "http://localhost:8080/#/?id=00000000-0000-0000-0000-000000000000"
-        // "http://localhost:8080/#/?id=00000000-0000-0000-0000-000000000000&manufacturerId=TATA"
+        // "http://localhost:8080/#/?id=00000000-0000-0000-0000-000000000000"
+        "http://localhost:8080/#/?id=00000000-0000-0000-0000-000000000000&manufacturerId=TATA"
     );
 
     // First page (Home Page)
@@ -68,12 +70,17 @@ const scarpping = async () => {
     await page.waitForSelector('#checked-out', { visible: true, timeout: 10000 });
     await page.click("#checked-out");
 
+    // Proposal Forms
     for (let i = 1; i <= 6; i++) {
         await waitForPageAndFillForm(page, i);
         if (i < 6) {
-            // await page.click("#submit");
+            // await page.click("#submit"); 
         }
     }
+
+    // Proceed
+    await page.waitForSelector('#review-proceed', { visible: true, timeout: 10000 });
+    await page.click("#review-proceed");
 };
 
 scarpping();
@@ -91,7 +98,7 @@ async function waitForPageAndFillForm(page, pageNumber) {
     console.log(`done form page ${pageNumber}`);
 }
 
-const fillFormFields = async (page, formData, timeoutTime = 500) => {
+const fillFormFields = async (page, formData, timeoutTime = 2000) => {
     for (const key of Object.keys(formData)) {
         const fields = formData[key];
         for (const field of fields) {
@@ -240,6 +247,37 @@ const fillFormFields = async (page, formData, timeoutTime = 500) => {
                         inputElement.value = input;
                     }, field.name, field.input); */
 
+                } else if (field.type === "date") {
+                    try {
+                        const dateSelector = `input[name="${field.name}"]`;
+
+                        await page.waitForSelector(dateSelector, { visible: true, timeout: timeoutTime });
+
+                        const isDisabled = await page.evaluate((name) => {
+                            const input = document.querySelector(`input[name="${name}"]`);
+                            return input ? input.disabled : false;
+                        }, field.name);
+
+                        if (isDisabled) {
+                            console.log(`Field "${field.name}" is disabled, skipping...`);
+                            continue;
+                        }
+
+                        const formattedDate = moment(field.input, 'YYYY-MM-DD').format('YYYY-MM-DD');
+
+                        await page.evaluate((name, value) => {
+                            const input = document.querySelector(`input[name="${name}"]`);
+                            if (input) {
+                                input.value = value;
+                                input.dispatchEvent(new Event('input', { bubbles: true }));
+                                input.dispatchEvent(new Event('change', { bubbles: true }));
+                            }
+                        }, field.name, formattedDate);
+                        console.log(`Date input "${field.name}" set to ${formattedDate}`);
+
+                    } catch (error) {
+                        console.error(`Error processing date input "${field.name}": ${error.message}`);
+                    }
                 }
             } catch (error) {
                 console.log(`Skipping field "${field.name}", Error: ${error.message}`);
